@@ -8,6 +8,13 @@ import Shared
 
 typealias SwiftKotlin = Repository & Codable
 
+/// Swift protocol with signatures matching the Kotlin Repository interface.
+protocol SwiftRepositoryContract {
+    func fetchData(id: String) -> String
+    func saveData(key: String, value: String) -> Bool
+    func deleteData(id: String) -> Bool
+}
+
 /// Swift implementation of Kotlin Repository interface.
 /// "Go to Super" on each method should navigate to the Kotlin interface declaration.
 class SwiftRepository: SwiftKotlin {

@@ -5,13 +5,6 @@
 import Foundation
 import Shared
 
-/// Swift protocol with signatures matching the Kotlin Repository interface.
-protocol SwiftRepositoryContract {
-    func fetchData(id: String) -> String
-    func saveData(key: String, value: String) -> Bool
-    func deleteData(id: String) -> Bool
-}
-
 /// Example 1: one class conforms to both a Swift protocol and Kotlin interface.
 class DualContractRepository: Repository, SwiftRepositoryContract {
 
