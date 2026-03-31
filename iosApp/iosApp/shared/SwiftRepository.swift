@@ -29,4 +29,8 @@ class SwiftRepository: SwiftKotlin {
     func deleteData(id: String) -> Bool {
         storage.removeValue(forKey: id) != nil
     }
+
+    func encode(to encoder: any Encoder) throws {
+        <#code#>
+    }
 }
